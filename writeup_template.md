@@ -146,8 +146,8 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Go straight or right	| Speed limit (80km/h)  						| 
-| Speed limit (30km/h) 	| Speed limit (30km/h) 							|
+| Go straight or right	| Go straight or right				        	| 
+| Wild animals crossing	| Speed limit (30km/h) 							|
 | Turn right ahead		| Turn right ahead								|
 | Priority road 		| Priority road 				 				|
 | Road work 			| Road work 									|
@@ -161,22 +161,22 @@ For the first image, the model is make wrong prediction is a speed limit (probab
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .54         			| Speed limit (80km/h)  						| 
-| .454     				| Go straight or right							|
-| .002					| Speed limit (60km/h)							|
-| .002	      			| Speed limit (100km/h)			 				|
-| .001				    | Yield											|
+| .977         			| Keep right				                	| 
+| .018     				| Go straight or right							|
+| .002					| Stop                      					|
+| .002	      			| Yield                 		 				|
+| .000				    | Traffic signals								|
 
 
-For the second image Speed limit (30km/h) the model make right prediction. Actually, during testing and traing the model I noticed that to prediction of that sign is most difficult.
+For the second image Speed limit (30km/h) the model make right prediction. Actually, during testing and training the model I noticed that to prediction of that sign is most difficult.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .98         			| Speed limit (30km/h) 							| 
-| .017     				| Speed limit (20km/h)							|
-| .002					| Speed limit (120km/h)							|
-| .000	      			| Bicycles crossing		 						|
-| .000				    | End of speed limit (80km/h)					|
+| .497         			| Speed limit (30km/h) 							| 
+| .143     				| End of all speed and passing limits 	    	|
+| .093					| Speed limit (20km/h)							|
+| .081	      			| Speed limit (60km/h) 			    			|
+| .063				    | Wild animals crossing 		                |
 
 
 
