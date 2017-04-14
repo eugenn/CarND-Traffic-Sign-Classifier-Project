@@ -106,8 +106,8 @@ To train the model, I used an AdamOptimizer function with 50 epochs or batch siz
 My final model results were:
 
 training set accuracy of 0.999
-validation set accuracy of 0.976
-test set accuracy of 0.951
+validation set accuracy of 0.955
+test set accuracy of 0.950
 
 
 As was mentioned before the first adjustments were the grayscaling and normalization to avoiding overfitting with RGB images and speeding up of trainig the model. The next improvement was balancing the training set. After that I've swapped the RELU and maxpooling functions in the my neural network and that gave me some extra points to accuracy. After this I added dropout between each fully connected layers to improve accuracy a little further.
@@ -126,7 +126,7 @@ What architecture was chosen? I chose LeNet to start with and then added some co
 Why did you believe it would be relevant to the traffic sign application? Based on the lessons LeNet seemed to be an obvious choice for image data of the traffic signs. Especially considering the common shapes involved with a traffic sign.
 
 How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-The accuracies on the training (0.999) and validation (0.958) are within 4.1% of each other, while the test accuracy (0.944) is within 1.44% of validation. This led me to believe that the model is a bit overfit but could be quite good for a new images.
+The accuracies on the training (0.999) and validation (0.955) are within 4.4% of each other, while the test accuracy (0.950) is within 0.54% of validation. This led me to believe that the model is a bit overfit but could be quite good for a new images.
  
 
 ###Test a Model on New Images
