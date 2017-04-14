@@ -52,27 +52,27 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![alt text][image1]
 
-Here is an exploratory visualization of the data set after applying class balancing.
+Here is an exploratory visualization of the data set after applying data set balancing by class id.
 ![alt text][image2]
 
 ###Design and Test a Model Architecture
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to work with RGB images and perform several tests. As a result, I found that RGB way lead to the overfitting the network. After that, I decided to pickup a several technicks to solve that issue. It is grayscaling and normalization.
+As a first step, I decided to work with RGB images and perform several tests. As a result, I found that RGB way lead to the overfitting the network. After that, I decided to pickup a several techniques to solve that issue. It is grayscaling and normalization.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image21]
 
-Also I decided to generate additional data because if you check histogram of class distribution in the training set, you will see that quantity of some classes significal more then other. 
+Also I decided to generate additional data because if you check histogram of class distribution in the training set, you will see that quantity of some classes significantly more than other.
 
 So I balanced classes to 3000 images of each class.
 
-I tried to augmented images, like apply rotations, adding noises, bluring and etc but that aproach didn't improve the test accuracy and performance. So I deciede don't use it at all.
+I tried to augmented images, like apply rotations, adding noises, blurring and etc but that approach didn't improve the test accuracy and performance. So I decided don't use it at all.
 
 
-So difference between the original data set and the augmented data set is the following: the trainig set balanced by class id distribution. 
+So difference between the original data set and the augmented data set is the following: the training set balanced by class id distribution. 
 
 
 ####2. My final model consisted of the following layers:
@@ -99,7 +99,7 @@ So difference between the original data set and the augmented data set is the fo
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an AdamOptimizer function with 50 epochs or batch size 128. I tried many differnet combinations of epochs and batch sizes and found this to be the best in terms of time to train and accuracy achieved. I used a learning rate of 0.0005.
+To train the model, I used an AdamOptimizer function with 50 epochs or batch size 128. I tried many different combinations of epochs and batch sizes and found this to be the best in terms of time to train and accuracy achieved. I used a learning rate of 0.0005.
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -110,10 +110,10 @@ validation set accuracy of 0.976
 test set accuracy of 0.951
 
 
-As was mentioned before the first adjustments were the grayscaling and normalization to avoiding overfitting with RGB images and speeding up of trainig the model. The next improvement was balancing the trainig set. After that I've swaped the RELU and maxpooling functions in the my neural network and that gave me some extra points to accuracy. After this I added dropout between each fully connected layers to improve accuracy a little further.
+As was mentioned before the first adjustments were the grayscaling and normalization to avoiding overfitting with RGB images and speeding up of trainig the model. The next improvement was balancing the training set. After that I've swapped the RELU and maxpooling functions in the my neural network and that gave me some extra points to accuracy. After this I added dropout between each fully connected layers to improve accuracy a little further.
 
 Which parameters were tuned? How were they adjusted and why? 
-I played a lot with learning rate, number of epochs, layers depths and dropouts. It was very hard for my to stop with futher new experiments. Because there are remains many other parameters to tune as well as various network configuration but I was limittied by time and costs for the AWS instatnce. I start playing with learning rate 20 and various layer depth. When I found promising configuration I increased quantity of epoch to 50. 
+I played a lot with learning rate, number of epochs, layers depths and dropouts. It was very hard for my to stop with further new experiments. Because there are remains many other parameters to tune as well as various network configuration but I was limited by time and costs for the AWS instance. I start playing with learning rate 20 and various layer depth. When I found promising configuration I increased quantity of epoch to 50. 
 
 What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model? 
 
@@ -168,7 +168,7 @@ For the first image, the model is make wrong prediction is a speed limit (probab
 | .001				    | Yield											|
 
 
-For the second image Speed limit (30km/h) the model make right prediction. Actually, during testing and traing the model I noticed that to prediction of that sign is most dificult.
+For the second image Speed limit (30km/h) the model make right prediction. Actually, during testing and traing the model I noticed that to prediction of that sign is most difficult.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
