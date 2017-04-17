@@ -138,7 +138,10 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The first image might be difficult to classify because it contains word "Zone" and looks slightly different from the images which were used for training the model. This is what I saw as a result of the tests of many models.
+The second image contains some parts of other objects which the model could treat as a part of sign.
+The Road work image there are some perspective distortions. Similarly, the image of a working person may be looks like a child crossing the road.
+Two last signs have contrasted background and part of the sign below it. This could have led to confusion for the model but based on the softmaxes it was very certain.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -168,7 +171,7 @@ For the first image, the model is make wrong prediction is a speed limit (probab
 | .000				    | Traffic signals								|
 
 
-For the second image Speed limit (30km/h) the model make right prediction. Actually, during testing and training the model I noticed that to prediction of that sign is most difficult.
+For the second image Speed limit (30km/h) the model make right prediction.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
