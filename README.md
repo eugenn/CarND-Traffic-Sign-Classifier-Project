@@ -45,7 +45,7 @@ Here is an exploratory visualization of the data set after applying data set bal
 ![alt text][image2]
 
 ### Design and Test a Model Architecture
-######1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to work with RGB images and perform several tests. As a result, I found that RGB way lead to the overfitting the network. After that, I decided to pickup a several techniques to solve that issue. It is grayscaling and normalization.
 
@@ -63,7 +63,7 @@ I tried to augmented images, like apply rotations, adding noises, blurring and e
 So difference between the original data set and the augmented data set is the following: the training set balanced by class id distribution. 
 
 
-####2. My final model consisted of the following layers:
+2. My final model consisted of the following layers:
 
 | Layer         				|     Description	        					| 
 |:-----------------------------:|:---------------------------------------------:| 
@@ -83,12 +83,11 @@ So difference between the original data set and the augmented data set is the fo
 |								|												|
 |								|												|
  
-
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an AdamOptimizer function with 50 epochs or batch size 128. I tried many different combinations of epochs and batch sizes and found this to be the best in terms of time to train and accuracy achieved. I used a learning rate of 0.0005.
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
 
@@ -133,7 +132,7 @@ The Road work image there are some perspective distortions. Similarly, the image
 
 Two last signs have contrasted background and part of the sign below it. This could have led to confusion for the model but based on the softmaxes it was very certain.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
@@ -148,7 +147,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 94.4%
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
 For the first image, the model is make wrong prediction is a speed limit (probability of 0.54). The top five soft max probabilities were
 
